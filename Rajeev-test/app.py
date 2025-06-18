@@ -16,7 +16,9 @@ nltk.data.path.append(os.path.abspath("nltk_data"))
 nltk.download('punkt')
 
 # Load intents from the JSON file
-file_path = os.path.abspath("./intents.json")
+# file_path = os.path.abspath("./intents.json")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, "intents.json")
 with open(file_path, "r") as file:
     intents = json.load(file)
 
